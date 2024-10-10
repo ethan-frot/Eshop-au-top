@@ -6,7 +6,9 @@ class ProductRepository
 {
     public function __construct()
     {
-        session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
     }
 
     public function persist(Product $product): Product
@@ -23,5 +25,16 @@ class ProductRepository
 
         return $_SESSION['products'];
     }
+
+    public function findById(int $id): ?Product {
+        foreach ($_SESSION['products'] as $product) {
+            if ($product->getId() == $id) {
+                return $product;
+            }
+        }
+
+        return null;
+    }
+
 
 }

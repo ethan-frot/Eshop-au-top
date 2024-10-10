@@ -1,6 +1,7 @@
 <?php
 
 require_once './order/model/repository/OrderRepository.php';
+require_once './product/model/repository/ProductRepository.php';
 
 class PayController
 {
@@ -13,6 +14,9 @@ class PayController
             require_once './order/view/404.php';
             return;
         }
+
+        $productRepository = new ProductRepository();
+        $products = $productRepository->findAll();
 
         require_once './order/view/pay.php';
     }

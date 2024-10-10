@@ -10,7 +10,9 @@ class OrderRepository {
 	// sans l'initialisation de la session, on ne peut pas 
 	// utiliser correctement la session ($_SESSION)
 	public function __construct() {
-		session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
 	}
 
 	public function persist(Order $order): Order {
