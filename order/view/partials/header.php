@@ -14,8 +14,9 @@
 				<li><a href="http://localhost:8888/esd-oop-php/set-shipping-address">Renseigner l'adresse de livraion</a></li>
 				<li><a href="http://localhost:8888/esd-oop-php/set-shipping-method">Renseigner la méthode de livraison</a></li>
 				<li><a href="http://localhost:8888/esd-oop-php/pay">Payer</a></li>
-
-
 			</ul>
+            <ul>
+                <li><a href="http://localhost:8888/esd-oop-php/create-product">Créer un produit</a></li>
+            </ul>
 		</nav>
 	</header>

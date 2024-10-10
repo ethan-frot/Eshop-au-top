@@ -14,13 +14,13 @@ class Products
 
     private DateTime $createdAt;
 
-    public function __construct(string $title, float $price, string $description, bool $status)
+    public function __construct(string $title, string $description)
     {
         $this->id = rand();
         $this->title = $title;
-        $this->price = $price;
+        $this->price = 2;
         $this->description = $description;
-        $this->status = $status;
+        $this->status = false;
         $this->createdAt = new DateTime();
     }
 

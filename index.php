@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require_once('./order/controller/IndexController.php');
 require_once('./order/controller/ProcessOrderCreateController.php');
 require_once('./order/controller/PayController.php');
@@ -8,6 +12,9 @@ require_once('./order/controller/ProcessShippingAddressController.php');
 require_once('./order/controller/ProcessShippingMethodController.php');
 require_once('./order/controller/SetShippingAddressController.php');
 require_once('./order/controller/SetShippingMethodController.php');
+
+require_once('./products/controller/CreateProductsController.php');
+require_once('./products/controller/ProcessCreateProductsController.php');
 
 // Récupère l'url actuelle et supprime le chemin de base
 // c'est à dire : http://localhost:8888/esd-oop-php/public/
@@ -66,5 +73,17 @@ if ($endUri === "set-shipping-address") {
 if ($endUri === "set-shipping-method") {
     $payController = new SetShippingMethodController();
     $payController->setShippingMethod();
+    return;
+}
+
+if($endUri === "create-product") {
+    $createProductController = new CreateProductsController();
+    $createProductController->indexCreateProduct();
+    return;
+}
+
+if($endUri === "create-product-process") {
+    $processCreateProductController = new ProcessCreateProductsController();
+    $processCreateProductController->createProducts();
     return;
 }
