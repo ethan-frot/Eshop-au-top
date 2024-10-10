@@ -4,7 +4,7 @@ require_once './order/model/repository/OrderRepository.php';
 
 class SetShippingAddressController
 {
-    public function setShippingAddress()
+    public function setShippingAddress(): void
     {
         $orderRepository = new OrderRepository();
         $order = $orderRepository->find();

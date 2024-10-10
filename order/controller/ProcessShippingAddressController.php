@@ -5,7 +5,7 @@ require_once './order/model/repository/OrderRepository.php';
 
 class ProcessShippingAddressController
 {
-    public function processShippingAddress()
+    public function processShippingAddress(): void
     {
        
         $orderRepository = new OrderRepository();

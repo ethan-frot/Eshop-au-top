@@ -5,7 +5,7 @@ require_once './product/model/repository/ProductRepository.php';
 
 class PayController
 {
-    public function pay()
+    public function pay(): void
     {
         $orderRepository = new OrderRepository();
         $order = $orderRepository->find();

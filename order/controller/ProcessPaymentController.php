@@ -5,8 +5,8 @@ require_once './order/model/repository/OrderRepository.php';
 
 class ProcessPaymentController
 {
-	public function processPayment()
-	{
+	public function processPayment(): void
+    {
 
 		$orderRepository = new OrderRepository();
 		$order = $orderRepository->find();

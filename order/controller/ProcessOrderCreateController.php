@@ -6,7 +6,8 @@ require_once './order/model/repository/OrderRepository.php';
 
 class CreateOrderController {
 
-	public function createOrder() {
+	public function createOrder(): void
+    {
 		try {
 
 			if (!isset($_POST['customerName']) || !isset($_POST['products'])) {
