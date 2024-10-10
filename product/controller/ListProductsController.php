@@ -10,7 +10,8 @@ class ListProductsController
         $products = $productRepository->findAll();
 
         if (!$products) {
-            require_once './order/view/404.php';
+            $errorMessage = "Y'a aucun produit, fait un effort";
+            require_once './order/view/order-error.php';
             return;
         }
 
