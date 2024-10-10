@@ -2,13 +2,14 @@
 
 class Product
 {
-    public static $MIN_CHARACTERS_TITLE = 3;
-    public static $MAX_CHARACTERS_TITLE = 100;
-    public static $MIN_PRICE = 1;
-    public static $MAX_PRICE = 500;
-    public static $DEFAULT_PRICE = 2;
-    public static $DEFAULT_STATUS = false;
-    
+    public static int $MIN_CHARACTERS_TITLE = 3;
+    public static int $MAX_CHARACTERS_TITLE = 100;
+    public static int $MIN_PRICE = 1;
+    public static int $MAX_PRICE = 500;
+    public static int $DEFAULT_PRICE = 2;
+    public static string $DEFAULT_DESCRIPTION = "Aucune description.";
+    public static bool $DEFAULT_STATUS = false;
+
     private string $title;
 
     private float $price;
@@ -17,19 +18,18 @@ class Product
 
     private bool $status;
 
-    public function __construct(string $title, float $price, string $description, ?bool $status )
+    public function __construct(string $title, float $price, string $description, ?bool $status)
     {
-        $this->validateTitle($title);
-        $this->validatePrice($price);
 
+        $this->validateTitle($title);
         $this->title = $title;
         $this->price = $price ?: Product::$DEFAULT_PRICE;
-        $this->description = $description;
+        $this->validatePrice($this->price);
+        $this->description = $description ?: Product::$DEFAULT_DESCRIPTION;
         $this->status = $status ?: Product::$DEFAULT_STATUS;
     }
 
-    public function validateTitle($title): void
-    {
+    public function validateTitle($title): void {
         $titleLength = strlen($title);
 
         if ($titleLength < self::$MIN_CHARACTERS_TITLE || $titleLength > self::$MAX_CHARACTERS_TITLE) {
@@ -37,7 +37,7 @@ class Product
         }
     }
 
-    public function validatePrice($price) {
+    public function validatePrice($price): void {
         if ($price < self::$MIN_PRICE || $price > self::$MAX_PRICE) {
             throw new Exception("Le prix doit être compris entre " . self::$MIN_PRICE . " et " . self::$MAX_PRICE . " euros.");
         }

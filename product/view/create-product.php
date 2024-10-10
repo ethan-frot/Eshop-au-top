@@ -9,7 +9,7 @@
             <input type="number" id="productPrice" name="productPrice" step="0.01">
             <br>
             <label for="productDescription">Description du produit</label>
-            <textarea id="productDescription" name="productDescription" required maxlength="200" rows="5" cols="30" style="resize: none;"></textarea>
+            <textarea id="productDescription" name="productDescription" rows="5" cols="30" style="resize: none;"></textarea>
             <br>
             <label for="productStatus">Produit actif ?</label>
             <input type="checkbox" id="productStatus" name="productStatus">

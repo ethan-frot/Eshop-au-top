@@ -4,7 +4,7 @@ require_once './product/model/repository/ProductRepository.php';
 
 class ListProductsController
 {
-    public function listProducts()
+    public function listProducts(): void
     {
         $productRepository = new ProductRepository();
         $products = $productRepository->findAll();

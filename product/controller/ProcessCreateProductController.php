@@ -5,9 +5,10 @@ require_once './product/model/repository/ProductRepository.php';
 
 
 class ProcessCreateProductController {
-    public function createProduct() {
+    public function createProduct(): void
+    {
         try {
-            if (!isset($_POST['productTitle']) || !isset($_POST['productDescription'])) {
+            if (!isset($_POST['productTitle'])) {
                 $errorMessage = "Merci de remplir les champs. J'ai pas fait tout ça pour rien.";
 
                 require_once './product/view/product-error.php';
@@ -16,7 +17,7 @@ class ProcessCreateProductController {
 
             $title = $_POST['productTitle'];
             $price = (float)$_POST['productPrice'];
-            $description = $_POST['productDescription'];
+            $description = $_POST['productDescription'] ?? null;
             $status = $_POST['productStatus'] ?? null;
 
             $product = new Product($title, $price, $description, $status);
