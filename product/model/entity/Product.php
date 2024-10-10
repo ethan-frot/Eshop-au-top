@@ -1,6 +1,6 @@
 <?php
 
-class Products
+class Product
 {
     private int $id;
     
@@ -22,6 +22,10 @@ class Products
         $this->description = $description;
         $this->status = $status ? $status : false;
         $this->createdAt = new DateTime();
+    }
+
+    public function getTitle(): string {
+        return $this->title;
     }
 
 }

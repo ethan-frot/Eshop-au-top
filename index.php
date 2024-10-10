@@ -13,8 +13,9 @@ require_once('./order/controller/ProcessShippingMethodController.php');
 require_once('./order/controller/SetShippingAddressController.php');
 require_once('./order/controller/SetShippingMethodController.php');
 
-require_once('./products/controller/CreateProductsController.php');
-require_once('./products/controller/ProcessCreateProductsController.php');
+require_once('./product/controller/CreateProductController.php');
+require_once('./product/controller/ProcessCreateProductController.php');
+require_once('./product/controller/ListProductsController.php');
 
 // Récupère l'url actuelle et supprime le chemin de base
 // c'est à dire : http://localhost:8888/esd-oop-php/public/
@@ -77,13 +78,19 @@ if ($endUri === "set-shipping-method") {
 }
 
 if($endUri === "create-product") {
-    $createProductController = new CreateProductsController();
+    $createProductController = new CreateProductController();
     $createProductController->indexCreateProduct();
     return;
 }
 
 if($endUri === "create-product-process") {
-    $processCreateProductController = new ProcessCreateProductsController();
-    $processCreateProductController->createProducts();
+    $processCreateProductController = new ProcessCreateProductController();
+    $processCreateProductController->createProduct();
+    return;
+}
+
+if($endUri === "list-products") {
+    $listProductsController = new ListProductsController();
+    $listProductsController->listProducts();
     return;
 }

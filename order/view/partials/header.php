@@ -17,6 +17,7 @@
 			</ul>
             <ul>
                 <li><a href="http://localhost:8888/esd-oop-php/create-product">Créer un produit</a></li>
+                <li><a href="http://localhost:8888/esd-oop-php/list-products">Liste des produits</a></li>
             </ul>
 		</nav>
 	</header>
