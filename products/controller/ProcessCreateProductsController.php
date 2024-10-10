@@ -15,9 +15,11 @@ class ProcessCreateProductsController {
             }
 
             $title = $_POST['productTitle'];
+            $price = $_POST['productPrice'];
             $description = $_POST['productDescription'];
+            $status = $_POST['productStatus'];
 
-            $product = new Products($title, $description);
+            $product = new Products($title, $price, $description, $status);
 
             $productRepository = new ProductsRepository();
             $productRepository->persist($product);

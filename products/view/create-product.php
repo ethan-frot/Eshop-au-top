@@ -5,11 +5,15 @@
             <label for="productTitle">Nom du produit</label>
             <input type="text" id="productTitle" name="productTitle" required pattern="^[a-zA-Z0-9\s]{3,100}$">
             <br>
-            <label for="productDescription">Description du produit</label>
-            <input type="text" id="productDescription" name="productDescription" required pattern="^[a-zA-Z0-9\s]{3,300}$">
+            <label for="productPrice">Prix</label>
+            <input type="number" id="productPrice" name="productPrice" step="0.01" required>
             <br>
-
-
+            <label for="productDescription">Description du produit</label>
+            <textarea id="productDescription" name="productDescription" required maxlength="200" rows="5" cols="30" style="resize: none;"></textarea>
+            <br>
+            <label for="productStatus">Produit actif ?</label>
+            <input type="checkbox" id="productStatus" name="productStatus">
+            <br>
             <button type="submit">Ajouter</button>
         </form>
     </main>
