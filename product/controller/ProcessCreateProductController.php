@@ -15,9 +15,9 @@ class ProcessCreateProductController {
             }
 
             $title = $_POST['productTitle'];
-            $price = $_POST['productPrice'];
+            $price = (float)$_POST['productPrice'];
             $description = $_POST['productDescription'];
-            $status = $_POST['productStatus'];
+            $status = $_POST['productStatus'] ?? null;
 
             $product = new Product($title, $price, $description, $status);
 
