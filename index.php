@@ -17,6 +17,7 @@ require_once('./product/controller/CreateProductController.php');
 require_once('./product/controller/ProcessCreateProductController.php');
 require_once('./product/controller/ListProductsController.php');
 require_once('./product/controller/DeleteProductController.php');
+require_once('./product/controller/AddToCartController.php');
 
 // Récupère l'url actuelle et supprime le chemin de base
 // c'est à dire : http://localhost:8888/Eshop-au-top/public/
@@ -97,7 +98,13 @@ if($endUri === "list-products") {
 }
 
 if($endUri === "delete-product") {
-    $listProductsController = new DeleteProductController();
-    $listProductsController->deleteProduct();
+    $deleteProductController = new DeleteProductController();
+    $deleteProductController->deleteProduct();
+    return;
+}
+
+if($endUri === "add-to-cart") {
+    $addToCartController = new AddToCartController();
+    $addToCartController->addToCart();
     return;
 }

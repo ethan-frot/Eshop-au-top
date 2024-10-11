@@ -39,29 +39,29 @@ class ProductRepository
     }
 
     public function findById(int $id): ?Product {
+
         foreach ($_SESSION['products'] as $product) {
             if ($product->getId() == $id) {
-                return $product;
+              return $product;
             }
         }
 
         return null;
     }
 
-    public function findSelectedProducts(array $productIds): array
-    {
-        $selectedProducts = [];
 
-        foreach ($productIds as $id) {
+
+    public function findByIds(array $ids): ?array {
+
+        $productMatched = [];
+
+        foreach ($ids as $id) {
             $product = $this->findById($id);
-            if ($product) {
-                $selectedProducts[] = $product;
-            }
+            $productMatched[] = $product;
         }
 
-        return $selectedProducts;
+        return $productMatched;
     }
-
     public function deleteById(int $id): bool
     {
         if (!isset($_SESSION['products'])) {

@@ -55,13 +55,13 @@ class Order {
 		return count($this->products) * Order::$UNIQUE_PRODUCT_PRICE;
 	}
 
-	public function addProduct(string $product): void {
+	public function addProduct(Product $product): void {
 
 		if ($this->isProductInCart($product)) {
 			throw new Exception('Le produit existe déjà dans le panier');
 		}
 
-		if ($this->status === Order::$CART_STATUS) {
+		if ($this->status === Order::$PAID_STATUS) {
 			throw new Exception('Vous ne pouvez plus ajouter de produits');
 		}
 
@@ -70,10 +70,11 @@ class Order {
 		}
 
 		$this->products[] = $product;
+
 		$this->totalPrice = $this->calculateTotalCart();
 	}
 
-	private function isProductInCart(string $product): bool {
+	private function isProductInCart(Product $product): bool {
 		return in_array($product, $this->products);
 	}
 
@@ -116,10 +117,11 @@ class Order {
 		$this->status = Order::$PAID_STATUS;
 	}
 
-    public function getSelectedProductIds(): array
+    public function getProducts(): array
     {
         return $this->products;
     }
+
 }
 
 

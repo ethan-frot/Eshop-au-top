@@ -14,7 +14,7 @@
 
             <div class="col-md-6 offset-md-3">
                 <label for="product" class="form-label">Produit</label>
-                <select id="product" name="products[]" class="form-select" multiple size="3" required>
+                <select id="product" name="productIds[]" class="form-select" multiple size="3" required>
                     <?php foreach ($products as $product) : ?>
                         <option value="<?php echo $product->getId(); ?>"><?php echo $product->getTitle(); ?></option>
                     <?php endforeach; ?>
