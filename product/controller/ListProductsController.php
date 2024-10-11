@@ -11,7 +11,7 @@ class ListProductsController
 
         if (!$products) {
             $errorMessage = "Y'a aucun produit, fait un effort";
-            require_once './order/view/order-error.php';
+            require_once './product/view/product-error.php';
             return;
         }
 

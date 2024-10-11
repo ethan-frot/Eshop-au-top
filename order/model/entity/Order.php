@@ -55,20 +55,6 @@ class Order {
 		return count($this->products) * Order::$UNIQUE_PRODUCT_PRICE;
 	}
 
-	public function removeProduct(string $product) {
-		$this->removeProductFromList($product);
-		$this->totalPrice = $this->calculateTotalCart();
-
-		$productsAsString = implode(',', $this->products);
-		echo "Liste des produits : {$productsAsString}</br></br>";
-	}
-
-	private function removeProductFromList(string $product) {
-		if (($key = array_search($product, $this->products)) !== false) {
-			unset($this->products[$key]);
-		}
-	}
-
 	public function addProduct(string $product): void {
 
 		if ($this->isProductInCart($product)) {
