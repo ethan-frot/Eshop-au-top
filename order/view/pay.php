@@ -3,6 +3,7 @@
 	<main>
 		<p>Payer la commande (c'est même pas débité sur votre compte. Ou peut être que si. Mais faites confiance) </p>
 
+        <?php if ($products): ?>
         <h3>Voici vos différents produits :</h3>
             <ul>
                 <?php foreach ($products as $product): ?>
@@ -14,6 +15,7 @@
                     </li>
                 <?php endforeach; ?>
             </ul>
+        <?php endif ?>
 
 
 		<form method="POST" action="http://localhost:8888/esd-oop-php/process-payment">
