@@ -12,7 +12,7 @@ class ProcessShippingAddressController
         $order = $orderRepository->find();
 
         if (!$order) {
-            require_once './order/view/404.php';
+            require_once './common/view/404.php';
             return;
         }
 
