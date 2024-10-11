@@ -55,7 +55,7 @@ Bienvenue dans le projet **Eshop au Top**, une application de commerce électron
 
    - Une fois le projet cloné, ouvrez votre navigateur et accédez à l'application via l'URL suivante :
      ```
-     http://localhost:8888/esd-oop-php
+     http://localhost:8888/Eshop-au-top/
      ```
 
 5. **Explorez l'application :**

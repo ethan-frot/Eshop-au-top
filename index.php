@@ -19,12 +19,12 @@ require_once('./product/controller/ListProductsController.php');
 require_once('./product/controller/DeleteProductController.php');
 
 // Récupère l'url actuelle et supprime le chemin de base
-// c'est à dire : http://localhost:8888/esd-oop-php/public/
+// c'est à dire : http://localhost:8888/Eshop-au-top/public/
 // donc cela ne garde que la fin de l'url
 
 $requestUri = $_SERVER['REQUEST_URI'];
 $uri = parse_url($requestUri, PHP_URL_PATH);
-$endUri = str_replace('/esd-oop-php/', '', $uri);
+$endUri = str_replace('/Eshop-au-top/', '', $uri);
 $endUri = trim($endUri, '/');
 
 
