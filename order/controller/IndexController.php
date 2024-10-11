@@ -7,7 +7,7 @@ class IndexController {
 	public function index(): void
     {
         $productRepository = new ProductRepository();
-        $products = $productRepository->findAll();
+        $products = $productRepository->findAllActiveProducts();
 
         if (!$products) {
             $errorMessage = "Y'a aucun produit, fait un effort";
