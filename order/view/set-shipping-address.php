@@ -4,7 +4,7 @@
     <h1 class="display-4">Adresse de livraison</h1>
     <p class="lead">Remplissez l'adresse de livraison :</p>
 
-    <form method="POST" action="http://localhost:8888/esd-oop-php/process-shipping-address" class="w-50">
+    <form method="POST" action="http://localhost:8888/Eshop-au-top/process-shipping-address" class="w-50">
         <div class="mb-3">
             <label for="shippingCountry" class="form-label">Pays de livraison</label>
             <input type="text" id="shippingCountry" name="shippingCountry" class="form-control" required pattern="^[a-zA-Z0-9\s.-]{5,50}$" title="Le pays doit contenir entre 5 et 50 caractères et des espaces.">

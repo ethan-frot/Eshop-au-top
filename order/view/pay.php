@@ -18,7 +18,7 @@
         </ul>
     <?php endif; ?>
 
-    <form method="POST" action="http://localhost:8888/esd-oop-php/process-payment" class="text-center">
+    <form method="POST" action="http://localhost:8888/Eshop-au-top/process-payment" class="text-center">
         <button type="submit" class="btn btn-primary">Payer</button>
     </form>
 </main>

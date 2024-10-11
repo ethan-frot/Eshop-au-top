@@ -23,24 +23,24 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8888/esd-oop-php/">Commander</a>
+                    <a class="nav-link" href="http://localhost:8888/Eshop-au-top/">Commander</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8888/esd-oop-php/set-shipping-address">Adresse de livraison</a>
+                    <a class="nav-link" href="http://localhost:8888/Eshop-au-top/set-shipping-address">Adresse de livraison</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8888/esd-oop-php/set-shipping-method">Méthode de livraison</a>
+                    <a class="nav-link" href="http://localhost:8888/Eshop-au-top/set-shipping-method">Méthode de livraison</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8888/esd-oop-php/pay">Payer</a>
+                    <a class="nav-link" href="http://localhost:8888/Eshop-au-top/pay">Payer</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8888/esd-oop-php/create-product">Créer un produit</a>
+                    <a class="nav-link" href="http://localhost:8888/Eshop-au-top/create-product">Créer un produit</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8888/esd-oop-php/list-products">Liste des produits</a>
+                    <a class="nav-link" href="http://localhost:8888/Eshop-au-top/list-products">Liste des produits</a>
                 </li>
             </ul>
         </div>

@@ -3,7 +3,7 @@
 <main class="d-flex justify-content-center align-items-center flex-column text-center">
     <h1 class="display-4">Créer un produit</h1>
 
-    <form method="POST" action="http://localhost:8888/esd-oop-php/create-product-process" class="w-50">
+    <form method="POST" action="http://localhost:8888/Eshop-au-top/create-product-process" class="w-50">
         <div class="mb-3">
             <label for="productTitle" class="form-label">Nom du produit</label>
             <input type="text" id="productTitle" name="productTitle" class="form-control" required pattern="^[a-zA-Z0-9\s]{3,100}$">

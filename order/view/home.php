@@ -5,7 +5,7 @@
     <div class="container">
         <h2 class="text-center mb-4">Passer une commande</h2>
 
-        <form method="POST" action="http://localhost:8888/esd-oop-php/create-order" class="row g-3">
+        <form method="POST" action="http://localhost:8888/Eshop-au-top/create-order" class="row g-3">
 
             <div class="col-md-6 offset-md-3">
                 <label for="customerName" class="form-label">Nom du client</label>

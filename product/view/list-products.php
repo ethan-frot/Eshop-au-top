@@ -10,7 +10,7 @@
                 <h4>Description : <?php echo $product->getDescription(); ?></h4>
                 <h4>Status : <?php echo $product->getStatus(); ?></h4>
 
-                <form method="post" action="http://localhost:8888/esd-oop-php/delete-product" class="d-inline">
+                <form method="post" action="http://localhost:8888/Eshop-au-top/delete-product" class="d-inline">
                     <input type="hidden" name="productId" value="<?php echo $product->getId(); ?>">
                     <button type="submit" class="btn btn-danger">
                         <i class="fa-solid fa-trash"></i>
