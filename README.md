@@ -42,6 +42,7 @@ Bienvenue dans le projet **Eshop au Top**, une application de commerce électron
 2. **Démarrez MAMP :**
 
    - Ouvrez MAMP et cliquez sur le bouton "Démarrer les serveurs". Assurez-vous que les serveurs Apache et MySQL sont en cours d'exécution.
+   - Vérifiez que le port Apache est défini sur **8888** (vous pouvez le modifier dans les préférences de MAMP si nécessaire).
 
 3. **Clonez le dépôt :**
 
