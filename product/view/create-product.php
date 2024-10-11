@@ -1,4 +1,5 @@
 <?php require_once('./order/view/partials/header.php'); ?>
+<?php require_once('./product/model/entity/Product.php');?>
 
 <main class="d-flex justify-content-center align-items-center flex-column text-center">
     <h1 class="display-4">Créer un produit</h1>
@@ -11,7 +12,7 @@
 
         <div class="mb-3">
             <label for="productPrice" class="form-label">Prix</label>
-            <input type="number" id="productPrice" name="productPrice" class="form-control" step="0.01" required>
+            <input type="number" id="productPrice" name="productPrice" class="form-control" step="0.01" min="<?php echo Product::$MIN_PRICE ?>" max="<?php echo Product::$MAX_PRICE ?>">
         </div>
 
         <div class="mb-3">
