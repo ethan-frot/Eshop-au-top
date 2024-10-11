@@ -1,4 +1,4 @@
-<?php require_once('./order/view/partials/header.php'); ?>
+<?php require_once('./common/view/partials/header.php'); ?>
 <?php require_once('./product/model/entity/Product.php');?>
 
 <main class="d-flex justify-content-center align-items-center flex-column text-center">
@@ -30,4 +30,4 @@
     </form>
 </main>
 
-<?php require_once('./order/view/partials/footer.php'); ?>
+<?php require_once('./common/view/partials/footer.php'); ?>

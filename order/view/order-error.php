@@ -1,4 +1,4 @@
-<?php require_once('./order/view/partials/header.php'); ?>
+<?php require_once('./common/view/partials/header.php'); ?>
 
 <main class="d-flex justify-content-center align-items-center flex-column text-center">
     <h1 class="display-4 text-danger">Erreur</h1>
@@ -6,4 +6,4 @@
     <a href="http://localhost:8888/Eshop-au-top/" class="btn btn-primary">Retour à l'accueil</a>
 </main>
 
-<?php require_once('./order/view/partials/footer.php'); ?>
+<?php require_once('./common/view/partials/footer.php'); ?>
