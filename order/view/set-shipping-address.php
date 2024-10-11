@@ -1,25 +1,27 @@
 <?php require_once('./order/view/partials/header.php'); ?>
-	
-	<main>
-		<p>Remplissez l'adresse de livraison : </p>
 
+<main class="d-flex justify-content-center align-items-center flex-column text-center">
+    <h1 class="display-4">Adresse de livraison</h1>
+    <p class="lead">Remplissez l'adresse de livraison :</p>
 
-		<form method="POST" action="http://localhost:8888/esd-oop-php/process-shipping-address">
+    <form method="POST" action="http://localhost:8888/esd-oop-php/process-shipping-address" class="w-50">
+        <div class="mb-3">
+            <label for="shippingCountry" class="form-label">Pays de livraison</label>
+            <input type="text" id="shippingCountry" name="shippingCountry" class="form-control" required pattern="^[a-zA-Z0-9\s.-]{5,50}$" title="Le pays doit contenir entre 5 et 50 caractères et des espaces.">
+        </div>
 
-			<label for="shippingCountry">Pays de livraison</label>
-			<input type="text" id="shippingCountry" name="shippingCountry" required pattern="^[a-zA-Z0-9\s.-]{5,50}$" title="Le pays doit contenir entre 5 et 50 caractères et des espaces.">
+        <div class="mb-3">
+            <label for="shippingCity" class="form-label">Ville de livraison</label>
+            <input type="text" id="shippingCity" name="shippingCity" class="form-control" required pattern="^[a-zA-Z0-9\s.-]{5,50}$" title="La Ville doit contenir entre 5 et 50 caractères.">
+        </div>
 
-			<br>
-			<label for="shippingCity">Ville de livraison</label>
-			<input type="text" id="shippingCity" name="shippingCity" required pattern="^[a-zA-Z0-9\s.-]{5,50}$" title="La Ville doit contenir entre 5 et 50 caractères.">
+        <div class="mb-3">
+            <label for="shippingAddress" class="form-label">Adresse de livraison</label>
+            <input type="text" id="shippingAddress" name="shippingAddress" class="form-control" required pattern="^[a-zA-Z0-9\s.-]{5,50}$" title="L'adresse doit contenir entre 5 et 50 caractères et des espaces.">
+        </div>
 
-			<br>
-			<label for="shippingAddress">Adresse de livraison</label>
-			<input type="text" id="shippingAddress" name="shippingAddress" required pattern="^[a-zA-Z0-9\s.-]{5,50}$" title="L'adresse doit contenir entre 5 et 50 caractères et des espaces.">
-				
-			<button type="submit">Ajouter</button>
-
-		</form>
-	</main>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+</main>
 
 <?php require_once('./order/view/partials/footer.php'); ?>
