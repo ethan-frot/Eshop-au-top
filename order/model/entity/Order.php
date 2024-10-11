@@ -51,12 +51,9 @@ class Order {
 		$this->totalPrice = count($products) * Order::$UNIQUE_PRODUCT_PRICE;
 	}
 
-
-
 	private function calculateTotalCart():  float {
 		return count($this->products) * Order::$UNIQUE_PRODUCT_PRICE;
 	}
-
 
 	public function removeProduct(string $product) {
 		$this->removeProductFromList($product);
@@ -71,7 +68,6 @@ class Order {
 			unset($this->products[$key]);
 		}
 	}
-
 
 	public function addProduct(string $product): void {
 
@@ -126,7 +122,6 @@ class Order {
 		$this->status = Order::$SHIPPING_METHOD_SET_STATUS;
 	}
 
-
 	public function pay(): void {
 		if ($this->status !== Order::$SHIPPING_METHOD_SET_STATUS) {
 			throw new Exception(message: 'Vous ne pouvez pas payer avant d\'avoir renseigné la méthode de livraison');
@@ -134,6 +129,11 @@ class Order {
 
 		$this->status = Order::$PAID_STATUS;
 	}
+
+    public function getSelectedProductIds(): array
+    {
+        return $this->products;
+    }
 }
 
 

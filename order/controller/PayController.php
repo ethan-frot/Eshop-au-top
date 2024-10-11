@@ -16,7 +16,8 @@ class PayController
         }
 
         $productRepository = new ProductRepository();
-        $products = $productRepository->findAll();
+        $selectedProductIds = $order->getSelectedProductIds();
+        $products = $productRepository->findSelectedProducts($selectedProductIds);
 
         require_once './order/view/pay.php';
     }

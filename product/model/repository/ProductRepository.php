@@ -36,5 +36,19 @@ class ProductRepository
         return null;
     }
 
+    public function findSelectedProducts(array $productIds): array
+    {
+        $selectedProducts = [];
+
+        foreach ($productIds as $id) {
+            $product = $this->findById($id);
+            if ($product) {
+                $selectedProducts[] = $product;
+            }
+        }
+
+        return $selectedProducts;
+    }
+
 
 }
